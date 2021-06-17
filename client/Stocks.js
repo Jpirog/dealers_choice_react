@@ -1,5 +1,5 @@
 import React from 'react';
-import AddStock from './addStock';
+import AddStock from './AddStock';
 
 const Stocks = (props) => {
   const { portfolio, sell, buy } = props;
