@@ -25,7 +25,7 @@ app.get('/', (req, res, next) => {
 })
 
 async function startServer() {
-  const port = 3111;
+  const port = process.env.PORT || 3111;
   try{
     await seedTestData();
     app.listen(port, () => {
