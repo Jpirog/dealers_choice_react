@@ -72,9 +72,6 @@ const seedTestData= async () => {
       clientSince: faker.date.past(),
       photoUrl: faker.image.people()
     })
-    // photoUrl: faker.image.imageUrl()
-    // photoUrl: 'http://lorempixel.com/400/200/people/'
-    // photoUrl: faker.image.people()
     
     // load 1 or 2 portfolios per client
     const nbrPortfolios = Math.ceil(Math.random()*2);
@@ -100,8 +97,6 @@ const seedTestData= async () => {
     }
   }
 } 
-
-//seedTestData();
 
 module.exports = {
   Client,

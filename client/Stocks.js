@@ -1,13 +1,13 @@
 import React from 'react';
+import AddStock from './addStock';
 
 const Stocks = (props) => {
-  const { portfolio } = props;
+  const { portfolio, sell, buy } = props;
   const { stocks } = portfolio;
-  console.log("IN STOCKS-stocks=", stocks)
   return (
     <div id='main-stocks' className='container'>
-      <h4>Stocks - Client {portfolio.client.name} ({portfolio.client.cityState})
-      </h4>
+      <h4>Portfolio Stock Inventory --- Client: {portfolio.client.name} --- Location: {portfolio.client.cityState}</h4>
+      <AddStock buy={buy} portfolioId={portfolio.id}/>
       <table id='stockstbl'>
         <tbody>
           <tr className='gray'>
@@ -18,6 +18,7 @@ const Stocks = (props) => {
             <td>Date Purchased</td>
             <td>Current Price</td>
             <td>Gain / Loss</td>
+            <td>Action</td>
           </tr>
 
 
@@ -33,6 +34,7 @@ const Stocks = (props) => {
               <td className='center'>{c.datePurchased}</td>
               <td className='right'>{currPrice}</td>
               <td className='right'>{gainLoss}</td>
+              <td><button onClick={() => sell(c.id)}>Sell</button></td>
               </tr>
             )
           })

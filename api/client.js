@@ -7,7 +7,8 @@ router.get('/', async (req, res, next) => {
     res.send(await Client.findAll({
       include: {
         model: Portfolio
-      }
+      },
+      order: [['name','ASC']]
     }))
     }
   catch(ex) {

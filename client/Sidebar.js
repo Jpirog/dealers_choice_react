@@ -15,9 +15,9 @@ const Sidebar = (props) => {
       <div id='sidebar'>
         <img src='institution_icon.svg' id='logo' />
         <section>
-          <h4>
-            <a href='/'>Clients</a>
-          </h4>
+          <h5>
+            <a id='client' onClick={props.resetToClients}>Clients</a>
+          </h5>
           <p className='info'>Employee:
           <br />{ props.employeeName }</p>
           <p className='info'>Last login:

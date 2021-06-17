@@ -3,9 +3,6 @@ import React from 'react';
 const Client = (props) => {
   const { client } = props;
   const { portfolios } = client;
-  //console.log("*** portfolios", portfolios);
-  //console.log('*** client id=',client.id, portfolios[0].id)
-  //portfolios.forEach(c => console.log('portfolio',c))
 
   return (
     <tr key={client.id}>

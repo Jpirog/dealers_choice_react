@@ -1,5 +1,3 @@
-console.log("IN API/INDEX")
-
 const router = require('express').Router()
 
 const clientRoutes = require('./client')

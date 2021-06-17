@@ -12,15 +12,12 @@ app.use(morgan('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-// serve css when asked
-//app.use(express.static(path.join(__dirname, 'public')));
 // static file serving
 app.use(express.static(path.join(__dirname, 'public')))
 app.use(express.static(path.join(__dirname, 'dist')))
 app.use(express.static(path.join(__dirname, 'node_modules', 'css')))
 // api main route
 app.use('/api', require('./api'))
-
 
 // send the initial HTML file
 app.get('/', (req, res, next) => {

@@ -3,7 +3,6 @@ import Client from './Client';
 
 const Clients = (props) => {
   const { clients } = props;
-  //console.log("IN CLIENTS", clients.length, clients[0])
     return (
       <div id='main-clients' className='container'>
           <h4>Active Client List</h4>
@@ -15,7 +14,7 @@ const Clients = (props) => {
               <td>Location</td>
               <td>Client Since</td>
               <td>Age</td>
-              <td colSpan="2">Portfolios</td>
+              <td colSpan="2">Portfolios (click)</td>
             </tr>
               { clients.map(c => {
                 return(

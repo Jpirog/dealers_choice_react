@@ -67,7 +67,7 @@ body {
   width: 100%;
   color: black;
   overflow: scroll;
-
+  padding-left: 10px;
 }
 #main-stocks{
   margin-left: 150px;
@@ -76,7 +76,7 @@ body {
   width: 100%;
   color: black;
   overflow: scroll;
-
+  padding-left: 10px;
 }
 .container {
   height: 100%;
@@ -117,4 +117,32 @@ td > img {
 }
 .center{
   text-align: center;
+}
+#client{
+  cursor: pointer;
+}
+#client:hover{
+  transition: border 0.2s ease;
+  cursor: pointer;
+}
+#sidebar a:hover {
+  border-bottom: 2px solid #00aaaa;
+}
+label{
+  margin-left: 10px;
+}
+input{
+  margin-left: 10px;
+}
+#buystock{
+  border: 1px solid black;
+  margin-bottom: 15px;
+  padding-left: 10px;;
+}
+h4{
+  margin-left: 25px;
+}
+table{
+  border-collapse:separate;
+  border-spacing:5px;
 }
