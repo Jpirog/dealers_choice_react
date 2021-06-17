@@ -3,7 +3,7 @@ const router = express.Router()
 //const { Stock } = require('../db/db')
 
 const request = require('request');
-console.log('IN STOCKDATA')
+//console.log('IN STOCKDATA')
 const fs = require('fs');
 const { Router } = require('express');
 //const { url } = require('inspector');
@@ -27,7 +27,7 @@ let stockData;
 const getStockData = async () => {
   await getApiKey();
   const url = `https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&interval=5min&symbol=MSI&apikey=${apiKey}`
-  console.log('AFTER CALL', url)
+  //console.log('AFTER CALL', url)
   await request.get({
     url: url,
     json: true,
@@ -42,7 +42,7 @@ const getStockData = async () => {
 router.get('/', async (req, res, next) => {
   try {
     await getStockData();
-    console.log('********** in stockdata/api', stockData)
+    //console.log('********** in stockdata/api', stockData)
     res.send(stockData)
     }
   catch(ex) {
